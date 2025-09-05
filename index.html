@@ -117,7 +117,7 @@
     }
 
     .contact-section .label {
-      font-family: Arial, sans-serif; /* font più leggibile */
+      font-family: Arial, sans-serif; /* leggibile */
       font-size: clamp(16px, 1.5vw, 24px);
       margin-bottom: 5px;
       display: block;
@@ -138,13 +138,13 @@
     /* Ottimizzazione mobile */
     @media (max-width: 768px) {
       .subtitle-en, .subtitle-de {
-        top: 32%;            /* abbassati ulteriormente per evitare sovrapposizione */
+        top: 40vh;            /* usa viewport height per evitare sovrapposizione */
         max-width: 40%;
         font-size: clamp(14px, 4vw, 24px);
       }
 
       .contact-section .label {
-        font-size: 16px;     /* più leggibile su mobile */
+        font-size: 16px;
         line-height: 1.3;
       }
 
