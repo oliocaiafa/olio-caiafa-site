@@ -2,11 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Olio Caiafa - Authentic Italian Olive Oil. Website coming soon. Follow us on Instagram for updates.">
+  <title>Olio Caiafa - Coming Soon</title>
+
+  <!-- Preload fonts -->
+  <link rel="preload" href="fonts/PhotographSignature.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Cinematografica.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    @font-face {
+      font-family: 'PhotographSignature';
+      src: url('fonts/PhotographSignature.woff2') format('woff2'),
+           url('fonts/PhotographSignature.woff') format('woff');
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Cinematografica';
+      src: url('fonts/Cinematografica.woff2') format('woff2'),
+           url('fonts/Cinematografica.woff') format('woff');
+      font-display: swap;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif; /* fallback */
+    }
+
+    body {
+      background: url('sfondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: #FFFFFF;
+    }
+
+    /* Overlay per migliorare contrasto */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    /* Contenuto sopra overlay */
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .main-text {
+      font-family: 'Cinematografica', sans-serif;
+      color: #A88F12;
+      font-size: 5vw;
+      margin-top: 10vh;
+    }
+
+    .subtitle {
+      font-size: 2vw;
+      margin-top: 1vh;
+      color: #FFFFFF;
+    }
+
+    .subtitle a {
+      color: #A88F12;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      position: absolute;
+      bottom: 10%;
+      text-align: center;
+      width: 100%;
+    }
+
+    .contact-section .label {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      display: block;
+      color: #FFFFFF;
+    }
+
+    .contact-section a {
+      font-family: 'PhotographSignature', cursive, sans-serif;
+      color: #4B5B45;
+      font-size: 2em;
+      text-decoration: none;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello from Cloudflare Pages 👋</h1>
-  <p>If you see this rendered, HTML works correctly.</p>
+
+  <div class="content">
+    <div class="main-text">Coming Soon</div>
+
+    <div class="subtitle">
+      We are working on our website – follow us on
+      <a href="https://www.instagram.com/oliocaiafa/" target="_blank" rel="noopener">Instagram</a><br>
+      Wir arbeiten an unserer Website – folgen Sie uns auf
+      <a href="https://www.instagram.com/oliocaiafa/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <span class="label">For information or orders, contact</span>
+    <a href="mailto:info@olio-caiafa.com">info[at]olio-caiafa.com</a>
+  </div>
+
 </body>
 </html>
-
