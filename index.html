@@ -34,59 +34,81 @@
     }
 
     body {
-      /* Sfondo ridotto e spostato in alto */
-      background: url('sfondo.jpg') no-repeat center top;
-      background-size: 70% auto; /* riduce lo sfondo al 70% della larghezza */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end; /* testo in basso */
-      align-items: center;
-      text-align: center;
+      background: url('sfondo.jpg') no-repeat center center fixed;
+      background-size: cover;
       position: relative;
       color: #FFFFFF;
-      padding-bottom: 15%; /* spazio sotto il testo */
+      overflow: hidden;
     }
 
-    /* Overlay per miglior contrasto */
     body::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0,0,0,0.4);
       z-index: 0;
     }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      margin-bottom: 5%; /* distanza sopra la sezione contatti */
-    }
-
+    /* Titolo centrale in alto */
     .main-text {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
       font-family: 'Cinematografica', sans-serif;
       color: #A88F12;
-      font-size: clamp(30px, 5vw, 80px);
-      margin-bottom: 1vh;
+      font-size: clamp(40px, 5vw, 80px);
+      z-index: 1;
+      text-align: center;
     }
 
-    .subtitle {
+    /* Sottotitoli inglese a sinistra, tedesco a destra */
+    .subtitle-en {
+      position: absolute;
+      top: 15%;
+      left: 5%;
       font-size: clamp(14px, 2vw, 28px);
-      color: #FFFFFF;
-      line-height: 1.5;
+      line-height: 1.4;
+      text-align: left;
+      z-index: 1;
     }
 
-    .subtitle a {
+    .subtitle-en a {
       color: #A88F12;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .subtitle a:hover {
+    .subtitle-en a:hover {
       text-decoration: underline;
     }
 
+    .subtitle-de {
+      position: absolute;
+      top: 15%;
+      right: 5%;
+      font-size: clamp(14px, 2vw, 28px);
+      line-height: 1.4;
+      text-align: right;
+      z-index: 1;
+    }
+
+    .subtitle-de a {
+      color: #A88F12;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .subtitle-de a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sezione contatti in basso */
     .contact-section {
-      position: relative;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
       text-align: center;
       z-index: 1;
     }
@@ -111,34 +133,32 @@
 
     @media (max-width: 768px) {
       .main-text {
-        font-size: clamp(24px, 8vw, 50px);
+        font-size: clamp(30px, 8vw, 60px);
+        top: 5%;
       }
-      .subtitle {
+      .subtitle-en, .subtitle-de {
         font-size: clamp(12px, 4vw, 20px);
-      }
-      body {
-        padding-bottom: 20%;
+        top: 12%;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="content">
-    <div class="main-text">Coming Soon</div>
+  <div class="main-text">Coming Soon</div>
 
-    <div class="subtitle">
-      We are working on our website – follow us on
-      <a href="https://www.instagram.com/oliocaiafa/" target="_blank" rel="noopener">Instagram</a><br>
-      Wir arbeiten an unserer Website – folgen Sie uns auf
-      <a href="https://www.instagram.com/oliocaiafa/" target="_blank" rel="noopener">Instagram</a>
-    </div>
+  <div class="subtitle-en">
+    We are working on our website –<br>
+    follow us on <a href="https://www.instagram.com/oliocaiafa/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+
+  <div class="subtitle-de">
+    Wir arbeiten an unserer Website –<br>
+    folgen Sie uns auf <a href="https://www.instagram.com/oliocaiafa/" target="_blank" rel="noopener">Instagram</a>
   </div>
 
   <div class="contact-section">
-    <span class="label">
-      For information or orders, contact / Für Informationen oder Bestellungen kontaktieren
-    </span>
+    <span class="label">For information or orders, contact / Für Informationen oder Bestellungen kontaktieren</span>
     <a href="mailto:info@olio-caiafa.com">info@olio-caiafa.com</a>
   </div>
 
