@@ -43,7 +43,7 @@
       text-align: center;
       position: relative;
       color: #FFFFFF;
-      padding-bottom: 15%; /* spazio sopra la sezione contatti */
+      padding-bottom: 15%;
     }
 
     /* Overlay per migliorare contrasto */
@@ -59,18 +59,22 @@
     .content {
       position: relative;
       z-index: 1;
-      margin-bottom: 5%; /* sposta il testo verso il basso sopra contatti */
+      max-height: 40%;   /* non occupa più del 40% dello schermo */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 5%; /* distanza sopra contatti */
     }
 
     .main-text {
       font-family: 'Cinematografica', sans-serif;
       color: #A88F12;
-      font-size: 5vw;
+      font-size: clamp(30px, 5vw, 80px); /* dimensione responsive con limiti */
       margin-bottom: 1vh;
     }
 
     .subtitle {
-      font-size: 2vw;
+      font-size: clamp(14px, 2vw, 28px);
       color: #FFFFFF;
       line-height: 1.5;
     }
@@ -107,6 +111,19 @@
 
     .contact-section a:hover {
       text-decoration: underline;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .main-text {
+        font-size: clamp(24px, 8vw, 50px);
+      }
+      .subtitle {
+        font-size: clamp(12px, 4vw, 20px);
+      }
+      body {
+        padding-bottom: 20%;
+      }
     }
   </style>
 </head>
