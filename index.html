@@ -34,19 +34,20 @@
     }
 
     body {
-      background: url('sfondo.jpg') no-repeat center center fixed;
-      background-size: cover;
+      /* Sfondo ridotto e spostato in alto */
+      background: url('sfondo.jpg') no-repeat center top;
+      background-size: 70% auto; /* riduce lo sfondo al 70% della larghezza */
       display: flex;
       flex-direction: column;
-      justify-content: flex-end; /* spinge il contenuto verso il basso */
+      justify-content: flex-end; /* testo in basso */
       align-items: center;
       text-align: center;
       position: relative;
       color: #FFFFFF;
-      padding-bottom: 15%;
+      padding-bottom: 15%; /* spazio sotto il testo */
     }
 
-    /* Overlay per migliorare contrasto */
+    /* Overlay per miglior contrasto */
     body::before {
       content: "";
       position: absolute;
@@ -55,21 +56,16 @@
       z-index: 0;
     }
 
-    /* Contenuto sopra overlay */
     .content {
       position: relative;
       z-index: 1;
-      max-height: 40%;   /* non occupa più del 40% dello schermo */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      margin-bottom: 5%; /* distanza sopra contatti */
+      margin-bottom: 5%; /* distanza sopra la sezione contatti */
     }
 
     .main-text {
       font-family: 'Cinematografica', sans-serif;
       color: #A88F12;
-      font-size: clamp(30px, 5vw, 80px); /* dimensione responsive con limiti */
+      font-size: clamp(30px, 5vw, 80px);
       margin-bottom: 1vh;
     }
 
@@ -113,7 +109,6 @@
       text-decoration: underline;
     }
 
-    /* Mobile adjustments */
     @media (max-width: 768px) {
       .main-text {
         font-size: clamp(24px, 8vw, 50px);
