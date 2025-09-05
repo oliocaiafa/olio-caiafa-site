@@ -30,7 +30,6 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      font-family: Arial, sans-serif;
     }
 
     body {
@@ -55,27 +54,28 @@
       top: 5%;
       left: 50%;
       transform: translateX(-50%);
-      font-family: 'Cinematografica', sans-serif;
+      font-family: 'Cinematografica', sans-serif; /* titolo originale */
       color: #A88F12;
-      font-size: clamp(30px, 6vw, 80px);
+      font-size: clamp(60px, 6vw, 100px);
       z-index: 1;
       text-align: center;
     }
 
-    /* Sottotitoli */
+    /* Sottotitoli - font leggibile */
     .subtitle-en, .subtitle-de {
       position: absolute;
-      font-family: 'Cinematografica', sans-serif;
-      font-size: clamp(14px, 2.5vw, 28px);
+      font-family: Arial, sans-serif; /* FONT leggibile originale per sottotitoli */
+      font-size: clamp(20px, 2.5vw, 36px);
       line-height: 1.4;
       z-index: 1;
     }
 
     .subtitle-en {
       left: 5%;
-      top: 15%;
+      top: 20%;
       text-align: left;
       max-width: 45%;
+      color: #FFFFFF;
     }
 
     .subtitle-en a {
@@ -90,9 +90,10 @@
 
     .subtitle-de {
       right: 5%;
-      top: 15%;
+      top: 20%;
       text-align: right;
       max-width: 45%;
+      color: #FFFFFF;
     }
 
     .subtitle-de a {
@@ -116,7 +117,8 @@
     }
 
     .contact-section .label {
-      font-size: clamp(0.8em, 1.5vw, 1.2em);
+      font-family: 'Cinematografica', sans-serif;
+      font-size: clamp(16px, 1.5vw, 24px);
       margin-bottom: 5px;
       display: block;
       color: #FFFFFF;
@@ -127,31 +129,30 @@
       font-family: 'PhotographSignature', cursive, sans-serif;
       color: #4B5B45;
       font-weight: bold;
-      font-size: clamp(1.2em, 4vw, 2em);
+      font-size: clamp(24px, 4vw, 36px);
       text-decoration: none;
       white-space: nowrap;
       overflow-wrap: normal;
     }
 
-    /* Ottimizzazione mobile */
     @media (max-width: 768px) {
       .subtitle-en, .subtitle-de {
-        top: 25%;           /* spostati più in basso */
-        max-width: 40%;     /* più stretti */
-        font-size: clamp(12px, 3vw, 18px); /* testo più piccolo */
+        top: 30%;
+        max-width: 40%;
+        font-size: clamp(14px, 4vw, 24px);
       }
 
       .contact-section .label {
-        font-size: 0.9em;
+        font-size: 14px;
         line-height: 1.2;
       }
 
       .contact-section a {
-        font-size: 1.5em;
+        font-size: 1.8em;
       }
 
       .main-text {
-        font-size: clamp(24px, 6vw, 40px);
+        font-size: clamp(40px, 8vw, 70px);
       }
     }
   </style>
@@ -171,7 +172,7 @@
   </div>
 
   <div class="contact-section">
-    <span class="label">Info/orders / Informationen oder Bestellungen</span>
+    <span class="label">For information or orders / Für Informationen oder Bestellungen</span>
     <a href="mailto:info@olio-caiafa.com">info@olio-caiafa.com</a>
   </div>
 
