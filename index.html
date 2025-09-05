@@ -38,11 +38,12 @@
       background-size: cover;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end; /* spinge il contenuto verso il basso */
       align-items: center;
       text-align: center;
       position: relative;
       color: #FFFFFF;
+      padding-bottom: 15%; /* spazio sopra la sezione contatti */
     }
 
     /* Overlay per migliorare contrasto */
@@ -58,19 +59,20 @@
     .content {
       position: relative;
       z-index: 1;
+      margin-bottom: 5%; /* sposta il testo verso il basso sopra contatti */
     }
 
     .main-text {
       font-family: 'Cinematografica', sans-serif;
       color: #A88F12;
       font-size: 5vw;
-      margin-top: 10vh;
+      margin-bottom: 1vh;
     }
 
     .subtitle {
       font-size: 2vw;
-      margin-top: 1vh;
       color: #FFFFFF;
+      line-height: 1.5;
     }
 
     .subtitle a {
@@ -84,10 +86,9 @@
     }
 
     .contact-section {
-      position: absolute;
-      bottom: 10%;
+      position: relative;
       text-align: center;
-      width: 100%;
+      z-index: 1;
     }
 
     .contact-section .label {
@@ -123,8 +124,10 @@
   </div>
 
   <div class="contact-section">
-    <span class="label">For information or orders, contact</span>
-    <a href="mailto:info@olio-caiafa.com">info[at]olio-caiafa.com</a>
+    <span class="label">
+      For information or orders, contact / Für Informationen oder Bestellungen kontaktieren
+    </span>
+    <a href="mailto:info@olio-caiafa.com">info@olio-caiafa.com</a>
   </div>
 
 </body>
